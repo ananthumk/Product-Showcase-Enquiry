@@ -5,7 +5,7 @@ import Home from './pages/Home/Home';
 import ProductPage from './pages/ProductPage/ProductPage';
 
 function App() {
-  const url = 'http://localhost:4000/api'
+  const url = 'https://product-showcase-enquiry-wss2.onrender.com/api'
   return (
     <AppContext.Provider value = {{url}}>
         <Routes>
