@@ -14,8 +14,13 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
+
+app.get('/', (req, res) => {
+  res.status(200).json({ status: 'Server is running' })
+})
+
 app.use('/api/auth', aRouter)
 app.use('/api/enquiries', eRouter)
 app.use('/api/products', pRouter)
 
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`))
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
