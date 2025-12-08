@@ -61,7 +61,7 @@ const getProduct = async (req, res) => {
 
     } catch (error) {
         console.error('Get product error:', error.message)
-        res.status(500).json({ message: "Internal Server Error" })
+        res.status(500).json({ message: "Internal Server Error" , error: error.message})
     }
 }
 
